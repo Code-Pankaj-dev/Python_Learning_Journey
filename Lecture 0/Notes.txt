@@ -1,0 +1,32 @@
+Question: What is Programming?
+Answer: 
+   Programming= Giving instruction to a Computer.
+   A program is set of steps to perform a task.
+   Example: Making tea (steps = code)
+  Computer understand logic, not emotions.
+
+Question: Why Learn Python?
+Answer: Python is everywhere:
+        AI& Machine Learning (ChatGPT, ML Models)
+        Web Development (Instagram, Reddit)
+        Data Analysis(Pandas, Excel++)
+        Automation (Scripts, Bots)
+        Game Development (Pygame)
+
+     Features of Python
+     ==================
+
+     1. Symple syntex (Like English).
+     2. Fast to Learn and Impliment.
+     3. Hugs Community supports.
+     4. Rich Library Ecosystem.
+     5. Works on Windows, MacOS, Linux.
+     6. Developed by Guido van Rossum.
+
+     Installing Python
+     =================
+
+     1. Go to https://www.python.org/downloads/
+     2. Downloads the letest version (3.x) on your according to OS
+     3. Tick 'Add Python to PATH'
+     4. Click 'Install Now' 

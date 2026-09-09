@@ -1,0 +1,164 @@
+1. Conditional Statement in Python
+----------------------------------
+    Conditional Statement allow your program to make decisions - run diffrent parts of code based on certain Conditions.
+
+    What Are Conditions?
+       A condition is simply a statement that can be either True or False.
+    Example: 
+       age = 18
+       print(age >= 18) #True
+
+    if Statement:
+       Used to run a block of code only when the condition is True.
+       age = int(input("Enter your age: "))
+
+       if age >= 18:
+       print("You are eligible for vote.")
+      If the condition is false, nothing happens.
+
+    if-else Statement:
+      mark = int(input("Enter youe Marks: "))
+
+      if marks >=40:
+      print("You Passed!")
+      else:
+      print("You are failed!")
+
+    if-elif-else Statement:
+      Used when we have multiple conditions.
+
+
+Practice Question 1.
+---------------------
+      #WAP that takes a number as input and prints:
+#   * "Positive" if number > 0
+#   * "Zero" if number == 0
+#   * "Negative" if number < 0
+
+
+store = int(input("Enter the Value: "))
+if(store >= 1):
+    print("Positive Value")
+elif(store <= -1):
+    print("Negative Value")
+else:
+    print("Zero")
+
+
+
+2.  List in Python
+------------------
+   Definition:   A list is a built-in data type that can store multiple Values in a single variable.
+           Lists are mutable (can be changed) and can store diffrent data types.
+    Example:
+          marks = [87, 67, 95, 97, 99]
+          food = ["Samosa", "Pizza", "Burger"]
+          student = ["Ranjeet" , "Anisha", "Sandhya" , "Sandeep"]
+    
+    Accessing Elements (Indexing)
+    -----------------------------
+        Each item in a list has an index starting from 0.
+          food = ["Samosa", "Pizza", "Burger"]
+
+        print(food[0])    #Samosa
+        print(food[2])    #Pizza
+
+    Modifying Elements:
+    -------------------
+         List are changeable.
+           food[0] = "Bread"
+           print(food)  # ["Bread", "Pizza", "Burger"]
+
+
+    List Slicing:
+    -------------
+         You can extract parts of a list using Slicing.
+
+         marks = [80, 50, 65, 75, 85, 95, 91, 88, 97]
+         print(marks[1:6])
+         print(marks[6:])
+         print(marks[:6])
+         print(Marks[-6:-8])
+           
+
+     LIST FUNCTIONS:
+     ===============
+
+
+     |-------------------|-------------------------------------|------------------------|
+     |     FUNCTIONS     |      DISCRIPTION                    |       EXAMPLE          |
+     |-------------------|-------------------------------------|------------------------|
+     |   len(list)       |      Returns length of list         |   len(marks) --> 9     | 
+     |-------------------|-------------------------------------|------------------------|
+     |    max(list)      |     Returns largest Value           |    max(marks) --> 97   |
+     |-------------------|-------------------------------------|------------------------|
+     |   min(list)       |     Returns smallest Value          |   min(marks) --> 50    |
+     |-------------------|-------------------------------------|------------------------|
+
+
+
+
+
+
+     |-----------------|-------------------------------|---------------------|
+     |     Method      |        DISCRIPTION            |      EXAMPLE        |
+     |-----------------|-------------------------------|---------------------|
+     |   .append(el)   | Adds Elements at the end      |   marks.append(99)  |
+     |-----------------|-------------------------------|---------------------|
+     |  .insert(i,el)  | Insert Elements at index      |  marks.insert(1,80) |
+     |-----------------|-------------------------------|---------------------|
+     |  .remove(el)    |  Remove First Occurence       |   marks.remove(64)   |
+     |-----------------|-------------------------------|---------------------|
+     |     .pop()      |  Remove Element at index      |     marks.pop(2)    |
+     |-----------------|-------------------------------|---------------------|
+     |     .sort()     | Sort list in ascending order  |  marks.sort()       |
+     |-----------------|-------------------------------|---------------------|
+     |    .reverse()   |   Reverses the list           |     marks.reverse() |
+     |-----------------|-------------------------------|---------------------|
+     |  .count(el)     |  Counts Occurences of a Value |   tup.count()       |
+     |-----------------|-------------------------------|---------------------|
+     |   .index(el)    |Returns first index of Element |  tup.index(30)      |
+     |-----------------|-------------------------------|---------------------|
+
+
+ Practice Question 2
+# WAP that takes names of 3 favorite foods from the user and stores them in a list. Then print the list and ts length.
+
+food1 = input("Enter the first Food: ")
+food2 = input("Enter the second Food: ")
+food3 = input("Enter the third Food: ")
+foodlist= food1, food2, food3
+print(foodlist)
+
+FoodList = []
+FoodList.append(food1)
+FoodList.append(food2)
+FoodList.append(food3)
+print(FoodList)
+
+
+3.   Tuples in Python
+---------------------
+     Definition: 
+         A tuple is a built-in data type that stores multiple Values like a list, but it is immutable (cannot be changed after creation).
+        tup = [87, 64, 33, 95, 76]
+        print(tup[0])         #87 
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            Practice Assignment
+                            ===================
+
+        1. Ask the user for their 3 favorite movies and store them in a list.
+        2. Create a tuple of marks (87, 64, 33, 95, 76) and print the heighest and lowest marks using max() and min().
+        3. WAP to check grade based an marks (A/B/C/D) using if-elif-else.

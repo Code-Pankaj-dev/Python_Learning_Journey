@@ -1,0 +1,271 @@
+ Python Programming — Fundamental Concepts
+1. How Python Code Executes
+=============================
+
+Python is a high-level, interpreted programming language. Python programs are executed through a process involving source code,
+ bytecode, and the Python Virtual Machine (PVM).
+
+Execution Flow
+=================
+                   Python Source Code (.py)
+                            ↓
+                          Compilation
+                            ↓
+                        Bytecode
+                            ↓
+                  Python Virtual Machine (PVM)
+                            ↓
+                         Output
+
+
+Key Points
+===========
+* Python source code is written in a .py file.
+* Python automatically compiles the source code into bytecode.
+* The bytecode is executed by the Python Virtual Machine (PVM).
+* The programmer does not need to perform the compilation process manually.
+* Python reports errors and exceptions during execution.
+* When an unhandled error occurs, program execution normally stops at that point.
+
+Example
+=======
+
+print("Hello")
+print("World")
+
+Output:
+=======
+
+Hello
+World
+
+2. Variables and Memory Concept
+================================
+
+A variable is a name or reference used to access a value or object during program execution.
+
+Example
+=======
+
+x = 10
+y = "Hello"
+
+Here:
+
+* x refers to the integer object 10.
+* y refers to the string object "Hello".
+
+Conceptually:
+=============
+
+x ───────► 10
+
+
+y ───────► "Hello"
+
+Dynamic Typing
+==============
+
+Python does not require the programmer to explicitly declare the data type of a variable.
+
+x = 10
+x = "Hello"
+
+Initially, x refers to an integer object. Later, it refers to a string object.
+
+This characteristic is known as dynamic typing.
+
+Variables as references
+=======================
+
+In Python, variables are better understood as names or references to objects, rather than fixed memory containers.
+
+The id() Function
+=================
+
+The id() function returns the unique identity of an object during its lifetime.
+
+x = 10
+print(id(x))
+
+The returned value represents the object's identity.
+
+Note:
+=====
+       It is better to describe id() as providing an object's identity, rather than always referring to it as its exact memory address.
+
+3. Taking User Input
+====================
+
+Python provides the input() function to accept data from the user.
+
+Example
+=======
+name = input("Enter your name: ")
+print("Hello", name)
+
+If the user enters:
+
+Pankaj
+
+The output will be:
+
+Hello Pankaj
+
+Important Point
+===============
+
+The input() function always returns a string (str).
+
+For example:
+
+age = input("Enter your age: ")
+print(type(age))
+
+If the user enters 20, the output will be:
+
+<class 'str'>
+
+Converting User Input:
+======================
+
+If numerical input is required, the string can be converted into the appropriate data type.
+
+Integer Input
+=============
+age = int(input("Enter your age: "))
+
+Floating-Point Input
+====================
+price = float(input("Enter the price: "))
+
+Example
+=======
+a = int(input("Enter the first number: "))
+b = int(input("Enter the second number: "))
+
+print(a + b)
+
+4. Expressions
+==============
+
+An expression is a combination of values, variables, operators, function calls, or other elements that Python evaluates to produce a value.
+
+Example
+=======
+x + 3
+
+Here:
+
+* x → Operand
+* 3 → Operand
+* + → Operator
+* x + 3 → Expression
+
+If:
+
+x = 10
+
+then:
+
+x + 3
+
+evaluates to:
+
+13
+
+Assignment Statement vs Expression
+==================================
+
+Consider:
+
+x = 10
+
+This is an assignment statement. The value 10 on the right-hand side is an expression.
+
+Whereas:
+
+x + 3
+
+is an expression that produces a value.
+
+5. Comments
+===========
+
+Comments are explanatory notes written in the source code that are not executed as part of the program.
+
+Comments are mainly used to improve code readability and documentation.
+
+Single-Line Comment
+===================
+
+Python uses the # symbol for single-line comments.
+
+# This is a comment
+
+
+x = 10
+
+A comment can also be written after a statement:
+
+x = 10  # Stores the value 10 in x
+
+Uses of Comments
+================
+
+Comments can be used to:
+
+* Explain the purpose of a section of code.
+* Improve code readability.
+* Document important information.
+* Help other developers understand the program.
+* Temporarily disable a line of code during debugging.
+
+6. Indentation
+==============
+
+Indentation refers to the spaces at the beginning of a line of code.
+
+Python uses indentation to define blocks of code. Therefore, proper indentation is an essential part of Python syntax.
+
+Example
+=======
+if age >= 18:
+    print("You are eligible.")
+
+The print() statement is indented, indicating that it belongs to the if block.
+
+Incorrect Indentation
+=====================
+if age >= 18:
+print("You are eligible.")
+
+This will result in an indentation-related error because the statement inside the if block is not properly indented.
+
+Standard Practice
+=================
+
+Python generally uses four spaces for one level of indentation.
+
+if condition:
+    statement
+
+Python vs Other Languages
+=========================
+
+Languages such as C, C++, and Java commonly use curly braces {} to define blocks.
+
+For example:
+
+if (condition) {
+    statement;
+}
+
+Python uses indentation instead:
+
+if condition:
+    statement
+
+Therefore, indentation is not merely a formatting convention in Python; it is part of the language's syntax.
+
+ 

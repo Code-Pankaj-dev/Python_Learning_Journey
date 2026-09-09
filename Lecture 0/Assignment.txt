@@ -1,0 +1,3 @@
+1st: WAP to print your name 10 time.
+2nd: WAP your name 10 time using * symbol and each time it should be next line.
+ 

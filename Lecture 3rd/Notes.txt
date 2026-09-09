@@ -1,0 +1,170 @@
+1.  What is a String?
+        A String is a data type in Python that store a sequence of characters -- Letters, number, or symbols -- enclosed  in single(' '), double(" "), or triple(''' ''') quotes.
+    Examples:
+        str1 = 'Hello Pankaj'
+        str2 = "Hello Rajan"
+        str3 = '''Hello Roshan'''
+    Note:
+        String are Immutable meaning once created, their content cannot be changed directly.
+2.  Create Strings
+        You can create strings in diffrent ways:
+        Pro1 = 'Hello Pankaj'
+        Pro2 = "Hello Rajan"
+        Pro3 = '''Hello Roshan'''
+     
+@@  String Concatenation:
+       print("Hello Rahul" + "Kaise ho" + "Aap")     Output:  Hello Rahul Kaise ho Aap
+    
+   
+@@  Length of String:   len("Hello Dev")        Output:   9
+          
+     
+3.  Indexing: 
+         Each character in a string has a position (index) string from 0.
+     str = "Pankaj Upadhyay" 
+    
+    Chars: P a n k a j U p a d  h  y  a  y 
+    index: 1 2 3 4 5 6 7 8 9 10 11 12 13 14
+
+    Examples:
+    str = "Apple"
+    print(str[0]) # A 
+    print(str[4]) # e
+     
+4.  Strings are Immutable:
+    str[0] = "B"    # Error: String cannot be changed directly.
+
+
+# Practice Question 1:
+ # WAP that takes a user's name an input and prints:
+#  1. The first character.
+#  2. The last character.
+#  3. The total length of name.
+
+
+Slicing:
+      Slicing lets you access a part of a string\
+    Snntex:
+      string[start : end] #end index is excluded
+    Examples:
+      str = "PremPrakash"
+      print(str[0:5])
+      print(str[:6])
+      print(str[6:])
+
+
+Negative Indexing:
+    P   a   n   k   a   j  U  p  a  d  h  y  a  y
+   -14 -13 -12 -11 -10 -9 -8 -7 -6 -5 -4 -3 -2 -1
+
+  str = "Pankaj Upadhyay"
+  print(str[-14:-9]) #Pankaj
+
+Practice Question2:
+WAP that takes your favorite food name as input and print:
+   1. The Middle 3 characters
+   2. The last 2 characters
+
+
+                          Common String Methods
+                          =====================
+     |-----------------|------------------------|--------------------------|
+     |     Method      |     Discription        |     Examples             |
+     |-----------------|------------------------|--------------------------|
+     |   .upper()      |  Convert all character | "samosa".upper()         |   
+     |                 |  to uppercase          |  ---> 'SAMOSA'           |
+     |-----------------|------------------------|--------------------------|
+     |   .lower()      |  Convert all character | "Samosa".upper()         |
+     |                 |  to lowercase          |  ---> 'samosha'          | 
+     |-----------------|------------------------|--------------------------|
+     |   .title()      |  Capitalizes the first |  "hello pankaj".title()  |   
+     |                 |  Letter of each word   |  ---> 'Hello Pankaj'     |
+     |-----------------|------------------------|--------------------------|
+     |   .find(sub)    |  Returns index of      |  "banana".find("na")     |
+     |                 |  first occurence       |  ---> 2                  |
+     |-----------------|------------------------|--------------------------|
+     |   .replace(old, | Replace all occurences |  "Python is cool".replace|
+     |    new)         |                        |   ("cool","fun") -->     |
+     |                 |                        |    'Python is fun'       |
+     |-----------------|------------------------|--------------------------|
+     |  .count(sub)    |    Counts occurences   | "mango".count("a")--> 1  | 
+     |-----------------|------------------------|--------------------------|
+     |.endswith(suffix)| Checks if string ends  | "coder.".endswith(".")   |
+     |                 | with given substring   |  --> True                |
+     |-----------------|------------------------|--------------------------|
+
+
+
+Practice Question3:
+   WAP that 
+    . Takes a sentence as input
+    . Concerts it to lovercase
+    . Replace all space " " with underscores "_"
+    . Prints the new string
+
+
+6.  Formatted Strings(f-Strings)
+     f-Strings make it easy to include variable inside strings.
+    Examples:
+         name = "Amar Pratap"
+         age = 21
+         print(f"My name is {name} and I am{age} year old.")
+
+    Output:
+          My name is Amar Pratap  and I am 21 year old.
+
+7.  Escape Squences:
+        Escape Squences let you use special formatting in strings.
+
+        |-------------------|--------------|---------------------|
+        |  Escape Sequence  |   New Line   |   Examples          |
+        |-------------------|--------------|---------------------|
+        |       \n          |  New Line    |   "Hello\nWorld"--> |
+        |                   |              | points on two lines |
+        |-------------------|--------------|---------------------|
+        |       \t          |  Tab space   |   "A\tB"--> adds a  |
+        |                   |              | tab between A and B |
+        |-------------------|--------------|---------------------|
+        |       \\          |  Backslash   | "C:\\newfolder"-->  |
+        |                   |              |  C:\newfolder       |
+        |-------------------|--------------|---------------------|
+        |       \'          |   Single     |    'It\' great' --> |
+        |                   |   quote      |     It's great      |
+        |-------------------|--------------|---------------------|
+        |      \"           | Double       | "He said \"Hi\""    |
+        |                   | quote        | --> He said "Hi"    |
+        |-------------------|--------------|---------------------|
+
+
+Mini Project: Emoji Converter
+------------------------------
+      Convert text-based emotions into Emojis.
+    Code Examples:
+     Emoji Converter - Basic Version (No if, no loop)
+     msg = input("Enter your message: ")
+
+     msg = msg.replace
+
+Assignment Set 3 [Chapter 3]
+----------------------------
+
+    1. WAP that takes a sentence and prints:
+       * Total characters (len())
+       * Uppercase Version
+       * Lowercase Version
+
+    2. WAP that takes any word or sentence as input and prints:
+       * The first character
+       * The last character
+       * The Total number of characters
+
+    3. 
+
+    
+
+ 
+
+ 
+     
+   
+         

@@ -1,0 +1,54 @@
+                SECTION (A)
+                ===========
+
+Question(1st): What are data type in Python? List any 4 Examles.
+Answer: 
+       Data type Programing Language me kisi bhi data ke type ko define karta hai... ki vo kis type ka data hai....
+    Example:
+          1. int()
+          2. float()
+          3. str()
+          3. bool()
+
+Question(2nd): What is the diffrent b/w Implicit and explicit type conversion?
+               Give One Examles of Each...
+Answer:
+       Implicit:   
+               Implicit type conversion me besically ye hota hai Python khud ye decide karta hai ki use ki typr ke data ko kis type me convert karta hai...
+            Note:  Python hamesa smaller to larger me convert karta hai...
+               Examles: 
+                   x = 15
+                   y = 15.78
+                   z = x+y
+                   print("x+y=", z)    ## z=30.78   isme Python ne larger value ke according smaller value ko convert kar liya hai...
+
+Question(3rd): What are Operators in Python? Explan any three types with Examples.
+Answer:
+       Operators:
+
+
+                   SECTION (B) Coding Questions
+
+Question(1st): Task: Smart Temperature Converter
+               Take input in Celsius and print its equivalent in Fahrenheit and Kelvin.
+               (Use explicite type conversion and arithmetic operations.)
+               Formula = (C * 9/5) + 32 for Fahrenheit, 
+               C + 273.15 for Kelvin....
+            Coding Part:
+                  Celsius = float(input("Enter Temprature in Celsius:"))
+                  Fahrenheit = (Celsius * 9/5) + 32
+                  Kelvin = Celsius + 273.15
+                  print("Celsius to Fahrenheit Value: ", Fahrenheit)
+                  print("Celsius to Kelvin Value: ", Kelvin)
+
+Question(2nd): Write a Program that takes total bill amount and number of friends as input     Calculate how much each person will pay. 
+Also print the data type of each variable used.
+   (HINT: use float() and division Operator)
+
+              
+
+
+
+                 
+
+

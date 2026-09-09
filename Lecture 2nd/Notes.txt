@@ -1,0 +1,114 @@
+                      DATA TYPES IN PYTHON
+                      ====================
+    Python has several built-in data types. They define the type of value a variable holds.
+
+      |--------|---------------------|-------------------------------------------|
+      | Type   |    Example          |            Description                    |
+      |--------|---------------------|-------------------------------------------|
+      |int     |  x = 10             |     While number (positive or negative)   |
+      |--------|---------------------|-------------------------------------------|
+      | float  |  y = 3.145          |     Number the Decimals                   |
+      |--------|---------------------|-------------------------------------------|
+      | str    |  name = "ranjeet"   |     Sequence of characters                |
+      |--------|---------------------|-------------------------------------------|
+      | bool   |  flag = True        |     Logical value: True or False          |
+      |--------|---------------------|-------------------------------------------|
+
+    NOTE: Use the type() function to check a variable's data type.
+    Example:
+            x = 10 
+            print(type(x))
+               Output: 
+                     <class "int">
+    
+    PRACTICE QUESTION (1): 
+            Write a Python Program that takes your age as input and print:
+            1. The Value Entersd
+            2. Its Data Types
+
+    KEYWORDS IN PYTHON
+    ==================
+    Keywords are reserved words that have special meaning in Python and cannot be used as variable names.
+
+         Example of common Keywords:
+              and, as, assert, break, class, continue, def, del, elif, else, except, False, finally, for, from, global, if, import, in, is, lambda, None, nonlocal, not, or, pass, raise, return, True, try, while, with, yield,
+
+    Tips: Use help("keywords") in Python shell to list al current keywords.
+
+    PRACTICE QUESTION (1):
+    =================
+                    Try to create a variable named for in Python. What error do you get and why?
+    
+    Print Sum Program
+    =================
+             Example Program to input two numbers print their sum:
+             #WAP to input two numbers print their sum:
+               # A = int(input("Enter the Value of A: "))
+               # B = int(input("Enter the Value of B:"))
+               # SUM = A+B
+               # print("Sum of A+B:", SUM)
+        Explanation:
+           * input() takes users input as a string
+           * int() convert it to an integer
+           * print() displays the result
+
+    PRACTICE QUESTION:
+    =================
+          Modify this Program to find the average of two numbers insted of the SUM.
+        
+    TYPE CONVERSIONS
+    ================
+        Type conversion means changing one data type to another.
+      A.  IMPLICIT CONVERSIONS (AUTOMETIC)
+          Python automatically converts smaller data types to larger ones to prevent data loss.
+           
+           x = 10  # int
+           y = 15.7 #float
+           z = x+y # Python converts int ------->  float
+           print(z)  # 25.7
+        
+      B.  Explicit conversion (Manual)
+          Manually convert data types using built-in function:
+
+          x = "10"
+          y = int(x)    #str--->int
+          print(y+5)    #Output: 15
+        
+       COMMON FUNCTIONS: 
+            int(), float(), str(), bool()
+
+    PRACTICE QUESTION (3):
+          Take a number as input, convert it to a float, and print both the original and converted values with their data types..
+
+    OPERATORS IN PYTHON:
+    ====================
+       Operators perform operations on variable and values.
+
+    |-------------|-----------------|---------------------------------------|
+    |   TYPE      |    EXAMPLE      |        DISCRIPTION                    |
+    |-------------|-----------------|---------------------------------------|
+    | Arithmetic  | + - * / % **    | Math operations(** for power)         |
+    |-------------|-----------------|---------------------------------------|
+    | Comparison  | == != > < >= <= | Compare values, returns True or False |
+    |-------------|-----------------|---------------------------------------|
+    |  Logical    | and or not      |   Combine Conditions                  |
+    |-------------|-----------------|---------------------------------------|
+    |Assignment   | = += -= *= /=   | Assign or Modify values               |
+    |-------------|-----------------|---------------------------------------|
+
+    Example: 
+      x = 5 
+      y = 5
+      print(x+y) #10
+      print(x>y) #True
+      print(x > 0 and y < 20) # True (Both Conditions are True)
+
+    PRACTICE QUESTION (4):
+         Write a Program that takes two number and prints:
+            * Their sum, diffrence, and product
+
+
+
+
+               
+

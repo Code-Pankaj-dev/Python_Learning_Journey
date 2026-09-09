@@ -1,0 +1,185 @@
+1. Dictionary in Python:
+-----------------------:
+     Definition:  A dictionary is a built in data type in Python used to store data in kry-value pairs.
+           Each key is unique and maps to a value.
+        Dictionaries are unordered, mutable (changeable), and don't allow duplicate keys.
+    Examples:
+       student = { 
+        "name" : "Pankaj Upadhyay",
+        "age" : 21,
+        "city" : "Siddharth Nagar",
+        "college" : "MMIT Bansi Siddharth Nagar",
+        "rollnumber" : 31
+       }
+
+    HERE: 
+      * "name", "age", "city", "college", "rollnumber" --> keys
+      * "Pankaj Upadhyay", 21, "Siddharth Nagar", "MMIT Bansi Siddharth Nagar", 31 --> value
+
+    Accessing Values:
+    -----------------
+                 You can access a value using its key:
+                 print(student["name"])      # Pankaj Upadhyay
+                 print(student["city"])      # Siddharth Nagar
+                 print(student["college"])    # MMIT Bansi Siddharth Nagar
+                
+            
+    Adding or Updating Values
+    -------------------------
+                  You can add new key-value pairs or modify existing ones:
+                     student["rollnumber"] = 21   # Add new key
+                     student["college"] = "BTEUP Lucknow"      # Update college name
+                     print(student)
+    
+    Removing Items:
+    ---------------
+             student.pop("city)         # Remove "city" key
+             print(student)
+        
+    Dictionary Methods:
+    ---------------------
+                 |-------------------|---------------------------------------|----------------------------|
+                 |      Method       |     Discription                       |       Examples             |
+                 |-------------------|---------------------------------------|----------------------------|
+                 |     .keys()       |   Returns all keys                    |   student.keys()           |
+                 |-------------------|---------------------------------------|----------------------------|
+                 |     .values()     |  Returns all values                   |    student.values()        |
+                 |-------------------|---------------------------------------|----------------------------|
+                 |    .items()       | Returns all key-value pairs as tuples |    student.items()         |
+                 |-------------------|---------------------------------------|----------------------------|
+                 |   .get(key)       | Returns value of a key safely         |  student.get("name")       |
+                 |-------------------|---------------------------------------|----------------------------|
+                 | .update(new_dict) | Updates dictionary with another       | student.update({"city" =   |
+                 |                   |                                       |  "Lucknow"})               |
+                 |-------------------|---------------------------------------|----------------------------|
+
+
+    Nested Dictionary:
+    ------------------
+         You can store another dictionary inside a dictionary.
+        Examples:
+            profile = {
+                "username" : "dev_verse",
+                "details" : {
+                    "followers" : 1300,
+                    "verified" : True
+                }
+            }
+        
+        Access: print(profile["details"]["followers"])  #  1300
+        ------:
+
+        Practice Question 1:
+        --------------------: Create a dictionary named marks to store marks of subjects. Add the subject one by one and print the finai dictionary.
+            
+            Examples:
+              Input:
+              Maths --> 90
+              Science --> 95
+              English --> 97
+
+            Output: {'Maths' : 90, 'Science' : 95, "English" : 97}
+
+
+2. Set in Python:
+----------------:
+   Definition: A set is a collection of unordered and unique items. Sets automatically remove duplicate elements and are written using curly braces{ }.
+
+   Examples:
+      languages = {"Python", "Java", "C++", "Python"}
+      print(languages)
+      # Output: 'Python', 'Java', 'C++'
+    
+  Create a Set:
+  ------------:
+     empty_set = set()  #Empty set
+     nums = {1, 2, 3, 4}  # Non-empty_set
+
+  Set Properties
+  --------------
+       * Unordered --> no fixed index positions
+       * Unique --> no duplicates.
+       * Mutable --> elements can be added or removed.
+       * Cannot contain mutable elements like lists or dictionaries.
+
+ Adding and Removing Elements:
+ ----------------------------:
+     nums ={1, 2, 3, 4, 5}
+     nums.add(6)
+     nums.remove(3)
+     print(nums)
+     #Output:
+            {1, 2, 4, 5, 6}
+
+        
+        Other Useful Methods
+        --------------------
+        
+                 |-------------------|---------------------------------------|----------------------------|
+                 |      Method       |     Discription                       |       Examples             |
+                 |-------------------|---------------------------------------|----------------------------|
+                 |     .add(el)      |   Add an Element                      |   nums.add(8)              |
+                 |-------------------|---------------------------------------|----------------------------|
+                 |   .remove(el)     |  Remove Element                       |    nums.remove(5)          |
+                 |-------------------|---------------------------------------|----------------------------|
+                 |    .clear()       | Empties the set                       |    nums.clear()            |
+                 |-------------------|---------------------------------------|----------------------------|
+                 |   .pop()          | Remove a rendom Element               |  nums.pop()                |
+                 |-------------------|---------------------------------------|----------------------------|
+                 | .union(set2)      | Combines both sets                    |   {1,2}.union({2,3 --})    |
+                 |-------------------|---------------------------------------|----------------------------|
+                 |.intersection(set2)|  Common Element of both sets          |  {1,2,3}.intersection      |
+                 |-------------------|---------------------------------------|----------------------------|
+
+        
+        Practice Question 2:
+        -------------------:
+# You are given a list of programming languages:
+# ["Python", "Java", "C++", "Python", "Java", "C"]
+# Convert it into a set and print how many unique languages Divya knows.
+
+programmingList = ["Python", "Java", "C++", "Python", "Java", "C"]
+print(type(programmingList))
+
+# how to convert a list into set
+programmingSet = set(programmingList)
+print(type(programmingSet))
+print(programmingSet)
+print("Divya knows these many language: ", len(programmingSet))
+
+
+3. Difference Between dictionary and Set
+----------------------------------------
+
+
+                 |-------------------|---------------------------------|----------------------------|
+                 |   Freatures       |       Dictionary                |     Set                    |
+                 |-------------------|---------------------------------|----------------------------|
+                 |   Structures      | Stores data as key-value pairs  | Stores unique values only  |
+                 |-------------------|---------------------------------|----------------------------|
+                 |   Syntex          |    { "key" : value }            | {value1, value2, .......}  |
+                 |-------------------|---------------------------------|----------------------------|
+                 |    Mutable        |      Yes                        |        Yes                 |
+                 |-------------------|---------------------------------|----------------------------|
+                 |   Duplicates      |  Keys are unique                |  All elements unique       |
+                 |-------------------|---------------------------------|----------------------------|
+                 |   Indexing        |  Not supported                  |     Not supported          |
+                 |-------------------|---------------------------------|----------------------------|
+
+
+    Mini Assignment:
+      1. Create a dictionary atoring meanings of 3 English words.
+      2. Create a set of numbers and show union and intersection with another set.
+      3. Try to add both integer 9 and float 9.0 to a set and observe what happens.
+           (Hint:  You can convert one into a string to make both unique.)
+
+
+
+
+              
+
+                   
+
+
+       
+  
