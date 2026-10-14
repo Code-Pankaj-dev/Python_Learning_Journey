@@ -1,0 +1,883 @@
+# 🐍 DAY 8 – FUNCTIONS IN PYTHON
+
+## 1. Introduction to Function
+
+A **Function** in Python is a block of reusable code that performs a specific task.
+
+Instead of writing the same lines repeatedly, we define a function once and use it multiple times.
+
+### Example Without Function:
+
+```python
+print("Hello Dev")
+print("Hello Dev")
+print("Hello Dev")
+```
+
+### Using a Function:
+
+```python
+def name():
+    print("Hello Dev, How are you...?")
+
+name()
+name()
+name()
+```
+
+### Advantages of Functions:
+
+* Code Reusability
+* Reduces Code Repetition
+* Makes code easier to understand
+* Makes debugging easier
+* Makes programs modular
+
+---
+
+# 2. Function Definition and Calling
+
+We use the `def` keyword to define a function.
+
+### Syntax:
+
+```python
+def function_name():
+    # code block
+```
+
+### Example:
+
+```python
+def welcome():
+    print("Welcome to Python Course by Saumya Dii")
+
+welcome()
+```
+
+### Important Terms:
+
+* `def` → Keyword used to define a function
+* `welcome` → Function name
+* `()` → Parentheses
+* Function body → Code written inside the function
+* `welcome()` → Function call
+
+---
+
+# 3. Simple Function – No Argument
+
+A function can work without accepting any arguments.
+
+```python
+def inspire():
+    print("Failure is not the opposite of success.")
+    print("It is part of success.")
+    print("— Pankaj Upadhyay")
+
+inspire()
+```
+
+A function can be called multiple times:
+
+```python
+inspire()
+inspire()
+inspire()
+```
+
+---
+
+# 4. Practice Questions – Basic Functions
+
+### 1. Write a function named `welcome_message()` that prints "Welcome to Python Programming...!" three times.
+
+```python
+def welcome_message():
+    print("Welcome to Python Programming...!")
+
+welcome_message()
+welcome_message()
+welcome_message()
+```
+
+### 2. Define a function `inspire()` that prints a motivational quote with your name.
+
+```python
+def inspire():
+    print("Failure is not the opposite of success.")
+    print("It is part of success.")
+    print("— Pankaj Upadhyay")
+
+inspire()
+```
+
+### 3. Create a function `good_morning()` that prints "Good Morning, Pankaj!". Call it twice.
+
+### 4. Why are functions used in programming? Write any two advantages.
+
+---
+
+# 5. Function Parameters and Arguments
+
+A function can accept data from outside.
+
+A **parameter** is a variable written inside the function definition.
+
+An **argument** is the actual value passed while calling the function.
+
+### Example:
+
+```python
+def greet(name):
+    print("Hello", name)
+
+greet("Pankaj Upadhyay")
+```
+
+Here:
+
+* `name` → Parameter
+* `"Pankaj Upadhyay"` → Argument
+
+### Multiple Parameters:
+
+```python
+def add(a, b):
+    print("Sum =", a + b)
+
+add(5, 10)
+```
+
+Output:
+
+```text
+Sum = 15
+```
+
+---
+
+# 6. Positional Arguments
+
+When arguments are passed according to their position, they are called **positional arguments**.
+
+```python
+def student(name, age):
+    print("Name:", name)
+    print("Age:", age)
+
+student("Pankaj", 21)
+```
+
+Here:
+
+```text
+name = "Pankaj"
+age = 21
+```
+
+The order of arguments matters.
+
+---
+
+# 7. Keyword Arguments
+
+We can pass values using the parameter names.
+
+```python
+def student_info(name, age):
+    print(name, "is", age, "years old")
+
+student_info(age=21, name="Pankaj Upadhyay")
+```
+
+Output:
+
+```text
+Pankaj Upadhyay is 21 years old
+```
+
+Here, the order does not matter because parameter names are specified.
+
+---
+
+# 8. Default Arguments
+
+A parameter can have a default value.
+
+If no argument is provided, the default value is used.
+
+```python
+def greet(name="Pankaj Upadhyay"):
+    print("Hello", name)
+
+greet()
+greet("Riya")
+```
+
+Output:
+
+```text
+Hello Pankaj Upadhyay
+Hello Riya
+```
+
+### Important:
+
+Required parameters should generally come before default parameters.
+
+Correct:
+
+```python
+def student(name, age=21):
+    print(name, age)
+```
+
+---
+
+# 9. Practice Questions – Parameters and Arguments
+
+1. Write a function `show_age(name, age)` that prints:
+   `"Pankaj Upadhyay is 21 years old"`.
+
+2. Create a function `add_numbers(a, b)` that prints both the sum and difference.
+
+3. Write a function `fav_food(food)` that prints:
+   `"Pankaj loves <food>"`.
+
+---
+
+# 10. Return Statement
+
+The `return` statement is used to send a value back from a function.
+
+After `return`, the function stops executing.
+
+### Example:
+
+```python
+def add(a, b):
+    return a + b
+
+result = add(10, 20)
+
+print("Result =", result)
+```
+
+Output:
+
+```text
+Result = 30
+```
+
+---
+
+# 11. print() vs return
+
+### `print()`
+
+Displays a value on the screen.
+
+```python
+def add(a, b):
+    print(a + b)
+```
+
+### `return`
+
+Sends a value back to the caller.
+
+```python
+def add(a, b):
+    return a + b
+```
+
+The returned value can be stored:
+
+```python
+result = add(10, 20)
+print(result)
+```
+
+---
+
+# 12. Return Stops Function Execution
+
+Once Python executes `return`, the function stops.
+
+```python
+def test():
+    print("Hello")
+    return
+    print("Python")
+
+test()
+```
+
+Output:
+
+```text
+Hello
+```
+
+`Python` will not be printed.
+
+---
+
+# 13. Returning Multiple Values
+
+A Python function can return multiple values.
+
+```python
+def calculate(a, b):
+    return a + b, a - b
+
+sum_result, difference = calculate(10, 5)
+
+print("Sum =", sum_result)
+print("Difference =", difference)
+```
+
+Output:
+
+```text
+Sum = 15
+Difference = 5
+```
+
+Python returns these values together as a tuple.
+
+---
+
+# 14. Practice Questions – Return
+
+1. Write a function `square(num)` that returns the square of a number.
+
+2. Write a function that takes a string and returns the count of vowels and consonants separately.
+
+3. Define a function `convert_to_upper(word)` that returns the uppercase version of the string.
+
+4. Create a function `full_name(fname, lname)` that returns the full name joined with a space.
+
+---
+
+# 15. Default and Keyword Arguments
+
+## Default Argument
+
+If no argument is provided, the default value is used.
+
+```python
+def message(text="Keep learning"):
+    print(text)
+
+message()
+message("Keep coding")
+```
+
+Output:
+
+```text
+Keep learning
+Keep coding
+```
+
+## Keyword Argument
+
+The parameter name can be used while passing the value.
+
+```python
+def student_info(name, age):
+    print(name, "is", age, "years old")
+
+student_info(age=21, name="Pankaj Upadhyay")
+```
+
+---
+
+# 16. Practice Questions – Default and Keyword Arguments
+
+1. Define a function `message(text="Keep learning")` and call it with and without an argument.
+
+2. Create a function `login(username, password="1234")` that prints the credentials.
+
+---
+
+# 17. Variable Scope – Local vs Global
+
+**Scope** determines where a variable can be accessed.
+
+## Local Variable
+
+A variable defined inside a function is generally accessible only within that function.
+
+```python
+def show():
+    score = 100
+    print("Inside function:", score)
+
+show()
+```
+
+Here, `score` is a local variable.
+
+## Global Variable
+
+A variable defined outside a function is a global variable.
+
+```python
+score = 50
+
+def show():
+    print("Inside function:", score)
+
+show()
+print("Outside function:", score)
+```
+
+---
+
+# 18. Local and Global Variable with Same Name
+
+```python
+x = 10
+
+def show():
+    x = 5
+    print("Inside function:", x)
+
+show()
+
+print("Outside function:", x)
+```
+
+Output:
+
+```text
+Inside function: 5
+Outside function: 10
+```
+
+The local `x` does not automatically change the global `x`.
+
+---
+
+# 19. global Keyword
+
+The `global` keyword can be used when we want to modify a global variable from inside a function.
+
+```python
+count = 10
+
+def change():
+    global count
+    count = 20
+
+change()
+
+print(count)
+```
+
+Output:
+
+```text
+20
+```
+
+---
+
+# 20. Practice Questions – Scope
+
+1. Write a program with a local variable `score` inside a function and a global variable outside.
+
+2. Create a program using the `global` keyword to modify a variable from inside a function.
+
+3. Explain the difference between local and global scope in your own words.
+
+---
+
+# 21. None in Python
+
+`None` represents the absence of a value.
+
+If a function does not explicitly return anything, Python automatically returns `None`.
+
+### Example:
+
+```python
+def greet():
+    print("Hello, Pankaj Upadhyay!")
+
+result = greet()
+
+print(result)
+```
+
+Output:
+
+```text
+Hello, Pankaj Upadhyay!
+None
+```
+
+---
+
+# 22. *args
+
+`*args` allows a function to accept a variable number of positional arguments.
+
+```python
+def total(*numbers):
+    print(numbers)
+
+total(10, 20, 30)
+```
+
+Output:
+
+```text
+(10, 20, 30)
+```
+
+Inside the function, `numbers` is a tuple.
+
+### Practical Example:
+
+```python
+def total(*numbers):
+    result = 0
+
+    for num in numbers:
+        result += num
+
+    return result
+
+print(total(10, 20))
+print(total(10, 20, 30, 40))
+```
+
+Output:
+
+```text
+30
+100
+```
+
+---
+
+# 23. **kwargs
+
+`**kwargs` allows a function to accept a variable number of keyword arguments.
+
+```python
+def student_info(**details):
+    print(details)
+
+student_info(
+    name="Pankaj",
+    age=21,
+    city="Kushinagar"
+)
+```
+
+Inside the function, `details` is a dictionary.
+
+---
+
+# 24. *args vs **kwargs
+
+| *args                         | **kwargs                               |
+| ----------------------------- | -------------------------------------- |
+| Variable positional arguments | Variable keyword arguments             |
+| Stored as a tuple             | Stored as a dictionary                 |
+| Example: `func(10, 20, 30)`   | Example: `func(name="Pankaj", age=21)` |
+
+---
+
+# 25. Docstring
+
+A **docstring** is a string used to describe what a function, class, or module does.
+
+It is written immediately inside the function.
+
+```python
+def square(num):
+    """Return the square of a number."""
+    return num * num
+
+print(square(5))
+```
+
+Output:
+
+```text
+25
+```
+
+We can access the docstring using:
+
+```python
+print(square.__doc__)
+```
+
+---
+
+# 26. Recursive Functions
+
+A function that **calls itself** is called a recursive function.
+
+### Example:
+
+```python
+def countdown(n):
+    if n == 0:
+        return
+
+    print(n)
+    countdown(n - 1)
+
+countdown(5)
+```
+
+Output:
+
+```text
+5
+4
+3
+2
+1
+```
+
+### Important Parts of Recursion:
+
+1. **Base Case** → Condition that stops recursion.
+2. **Recursive Case** → Function calls itself.
+
+Without a proper base case, recursion may continue until Python raises a recursion-related error.
+
+---
+
+# 27. Factorial Using Recursion
+
+Factorial of 5:
+
+```text
+5 × 4 × 3 × 2 × 1 = 120
+```
+
+### Python Program:
+
+```python
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+
+    return n * factorial(n - 1)
+
+print(factorial(5))
+```
+
+Output:
+
+```text
+120
+```
+
+---
+
+# 28. Function Before Calling
+
+A function should normally be defined before Python reaches the function call.
+
+### Correct:
+
+```python
+def welcome():
+    print("Welcome!")
+
+welcome()
+```
+
+If Python reaches the function call before the function definition has been executed, a `NameError` can occur.
+
+---
+
+# 29. Function with String
+
+```python
+def convert_to_upper(word):
+    return word.upper()
+
+result = convert_to_upper("python")
+
+print(result)
+```
+
+Output:
+
+```text
+PYTHON
+```
+
+---
+
+# 30. Function to Calculate Square
+
+```python
+def square(num):
+    return num * num
+
+print(square(5))
+```
+
+Output:
+
+```text
+25
+```
+
+---
+
+# 31. Function to Create Full Name
+
+```python
+def full_name(fname, lname):
+    return fname + " " + lname
+
+name = full_name("Pankaj", "Upadhyay")
+
+print(name)
+```
+
+Output:
+
+```text
+Pankaj Upadhyay
+```
+
+---
+
+# 32. Important Function Rules
+
+### Rule 1 – Use Meaningful Function Names
+
+```python
+def calculate_sum():
+    pass
+```
+
+### Rule 2 – Use Proper Indentation
+
+```python
+def greet():
+    print("Hello")
+```
+
+### Rule 3 – Parameters Receive Values
+
+```python
+def greet(name):
+    print(name)
+```
+
+### Rule 4 – Arguments Are Passed During Function Call
+
+```python
+greet("Pankaj")
+```
+
+---
+
+# 📝 PRACTICE QUESTIONS
+
+## Basic Functions
+
+1. Write a function `welcome_message()` that prints `"Welcome to Python Programming!"` three times.
+2. Create `good_morning()` and call it twice.
+3. Create `display_python()` that prints `"Python is Fun"`.
+4. Create `learn()` that prints three Python topics.
+5. Create `inspire()` that prints a motivational quote with your name.
+
+## Parameters & Arguments
+
+6. Create `show_age(name, age)`.
+7. Create `add_numbers(a, b)` that prints sum and difference.
+8. Create `fav_food(food)` that prints `"Pankaj loves <food>"`.
+
+## Return
+
+## Return
+
+9. Create `square(num)` that returns the square.
+10. Create `convert_to_upper(word)`.
+11. Write a function that takes a string and returns the count of vowels and consonants separately.
+12. Create `full_name(fname, lname)`.
+13. Create a function that returns the sum and difference of two numbers.
+
+## Default & Keyword Arguments
+
+14. Create `message(text="Keep learning")`.
+15. Create `login(username, password="1234")`.
+16. Call a function using keyword arguments.
+
+## Scope
+
+17. Create a program with a local variable and a global variable.
+18. Use the `global` keyword to modify a global variable.
+
+## Advanced
+
+19. Create a function using `*args`.
+20. Create a function using `**kwargs`.
+21. Create a recursive function for countdown.
+22. Create a recursive factorial function.
+
+---
+
+# 🎯 DAY 8 – QUICK REVISION
+
+| Concept          | Meaning                                |
+| ---------------- | -------------------------------------- |
+| `def`            | Defines a function                     |
+| Function Call    | Executes a function                    |
+| Parameter        | Variable in function definition        |
+| Argument         | Actual value passed to function        |
+| `return`         | Sends value back                       |
+| Default Argument | Uses a predefined value                |
+| Keyword Argument | Value passed using parameter name      |
+| `*args`          | Multiple positional arguments          |
+| `**kwargs`       | Multiple keyword arguments             |
+| Local Variable   | Variable inside a function             |
+| Global Variable  | Variable outside a function            |
+| `global`         | Allows modification of global variable |
+| `None`           | Represents no value                    |
+| Docstring        | Describes a function                   |
+| Recursion        | Function calling itself                |
+
+---
+
+# ⭐ MOST IMPORTANT DIFFERENCE
+
+```text
+Parameter → Function definition me hota hai.
+
+Argument → Function call ke time diya jata hai.
+```
+
+### Example:
+
+```python
+def greet(name):       # name = Parameter
+    print("Hello", name)
+
+greet("Pankaj")        # "Pankaj" = Argument
+```
+
+---
+
+# 🚀 DAY 8 TAKEAWAY
+
+> Functions help us write reusable, organized, readable and maintainable Python code.
+
+**Learn → Practice → Build → Repeat 🐍💻**

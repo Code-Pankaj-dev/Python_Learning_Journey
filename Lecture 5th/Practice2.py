@@ -5,7 +5,7 @@
 programmingList = ["Python", "Java", "C++", "Python", "Java", "C"]
 print(type(programmingList))
 
-# how to convert a list into set
+# Convert a list into a set
 programmingSet = set(programmingList)
 print(type(programmingSet))
 print(programmingSet)

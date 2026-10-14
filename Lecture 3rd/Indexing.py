@@ -1,6 +1,6 @@
-str = "AbhayPratap"
-length = len(str)
-print(str) # AbhayPratap
-print(len(str)) # 11
+name = "AbhayPratap"
+length = len(name)
+print(name) # AbhayPratap
+print(len(name)) # 11
 
-print(str[0]) # A
+print(name[0]) # A

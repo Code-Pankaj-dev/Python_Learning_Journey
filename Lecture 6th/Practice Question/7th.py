@@ -39,7 +39,6 @@
 
 
 
-
     #  WAP to print a multiplication of any number using while loop.
 
 num = input("Enter the number: ")

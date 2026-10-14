@@ -8,9 +8,14 @@ print(str3)
 
 # String Concatenation:
 #----------------------
-print("Pankaj" + " " "Upadhyay")
+print("Pankaj" + " " + "Upadhyay")
 # print(str1 + str2 + str3)
 
-#Length of String:
-# print(len(str1, str2, str3))
+# Length of String:
+#------------------
+# print(len(str1, str2, str3))   # Wrong
+print(len(str1))
+print(len(str2))
+print(len(str3))
+
 print(len("Hello Dev"))

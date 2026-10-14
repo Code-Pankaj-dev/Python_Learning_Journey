@@ -1,5 +1,5 @@
 #understanding slicing concept 
-str = "PremPratap"
+str = "PremPrakash"
 
 Firsthalf = str[0:4]
 TrailFirsthalf = str[:4]

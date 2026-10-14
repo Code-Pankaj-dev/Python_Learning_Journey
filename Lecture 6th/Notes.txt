@@ -1,227 +1,596 @@
-1. Introduction to loop:
-------------------------
-     In Python, loops are used to repeat a block of code multiple time.
+# Python Learning — Day 7
 
-     They help performs tasks like printing a message several times, iterating over lists, or generating patterns.
+## Topic: Loops in Python
 
-    Example:
-       print("Pankaj Upadhyay")
-       print("Pankaj Upadhyay")
-       print("Pankaj Upadhyay")
-       print("Pankaj Upadhyay")
-       print("Pankaj Upadhyay")
+---
 
-    Insted of writing this three times, we can use a loop.
+# 1. Introduction to Loops
 
-2. while loop:
----------------
-      A while loop runs as long as a condition is True.
-    Syntex:
-    -------:    while condition:
-                   # code block
+In Python, **loops** are used to repeat a block of code multiple times.
 
-    Example:
-    --------
-           i = 1
-           while i<=5:
-               print("Pankaj Upadhyay")
-             #  i+=1 
-               i= i+1  
+They help perform tasks such as:
 
-    Output:
-    ------:
-            Pankaj Upadhyay
-            Pankaj Upadhyay
-            Pankaj Upadhyay
-            Pankaj Upadhyay
-            Pankaj Upadhyay
+* Printing a message multiple times
+* Iterating over lists, tuples, and strings
+* Generating patterns
+* Performing repetitive calculations
 
-Practice Questions:
-1. WAP to print numbers from 1 to 10 using a while loop.
-2. WAP to print numbers from 10 down to 1 using a while loop .
-3. WAP to print all even numbers between 1 to 100 using a while loop
-4. WAP that print the sum of first m natural numbers. 
-   For Examples: if num = 5, then output shoud be 1+2+3+4+5=15
-   (Hint: keep a running total inside the loop)
-5.  WAP to print this pattern using a while loop
-     *
-     * *
-     * * *
-     * * * *
-6. Saumya wants to print her name 5 time, but each time with a number in front of it. 
-   WAP using a while loop that prints:
-     1. Saumya Singh
-     2. Saumya Singh
-     3. Saumya Singh
-     4. Saumya Singh
-     5. Saumya Singh
-7. WAP to print a multiplication of any number using while loop.
+### Example Without a Loop
 
+```python
+print("Pankaj Upadhyay")
+print("Pankaj Upadhyay")
+print("Pankaj Upadhyay")
+print("Pankaj Upadhyay")
+print("Pankaj Upadhyay")
+```
 
-3. for loop
------------
-     A for loop is used to iterate (go through) sequence like lists, tuples, or strings.
-    Syntex:
-    ------:
-         for element in sequence:
-              # code block
-    Example:
-    -------:
-          foods = ["Pizza", "Burger", "Samosha", "Pakuda"]
-          for item in foods:
-              print("Pankaj likes: ", item)
-    Output:
-    ------:
-           Pankaj likes: Pizza
-           Pankaj likes: Burger
-           Pankaj likes: Samosha
-           Pankaj likes: Pakuda
+Instead of writing the same code five times, we can use a loop.
 
-    for loop with range():
-    ---------------------:
-         The range function is generates a sequence of numbers.
-         It is often used with loops.
+---
 
-    Syntex:
-    ------: 
-    
-       range(start, stop, step)
-         * start--> begining number (default = 0)
-         * stop --> end limit (excluded)
-         * step --> increment value (default = 1)
-        
-    Example:
-    -------: 
-    for i in range(1, 6):
-    print("Iteration:",i)
+# 2. While Loop
 
-    Output:
-    ------:
-          Iteration: 1
-          Iteration: 2
-          Iteration: 3
-          Iteration: 4 
-          Iteration: 5
+A **while loop** repeatedly executes a block of code as long as a given condition is `True`.
 
-Practice Questions:
-------------------:
-8.  WAP using for and range() to print all even numbers between 1 to 100.
-9.  WAP to print number from 1 to 50, but print "Dev_Verse" insead of numbers that are multiple of 5. 
-    Example Output: 1,2,3,4 Dev_Verse 6,7,8,9,Dev_Verse.................
-10. WAP to print a square of each number from 1 to 10 using a for loop.
-    Example Output: 1, 4, 9, 16, 25, 36, 49, 64, 81, 100.
-11.  WAP that print the multiplications table of any number entered by the user using a for loop.
-Example Optput: 
- 6*1 = 6
- 6*2 = 12
- 6*3 = 18
-  .
-  .
- 6*10 = 60
+### Syntax
 
-12.  WAP that print all numbers from 100 to 1 range().
-  Hint:
-      Use a negative step: range(100,0,-1)
-13.  Pankaj wants to print the user name five time in uppercase letters.    
-     WAP to print 
-       DEV_VERSE_2
-       DEV_VERSE_2
-       DEV_VERSE_2
-       DEV_VERSE_2
-       DEV_VERSE_2 
+```python
+while condition:
+    # code block
+```
 
-14. You are given a list of Pankaj's favorite foods.  Write a Python perform to print each food item using a for loop.
-15. Saumya has created a tuple of countries she has already traveled to. Write a Python program to print each country using a for loop.
+### Example
 
-countries_traveled = ("Malaysia", "Vietnam", "Switzerland", "Italy", "Bhutan")
+```python
+i = 1
 
-4. break, continue and pass:
----------------------------:
-    break Statement:
-    ---------------:
-                    The break Statement stops the loop immediately when it is encountered.
-        Example:
-        -------:   for num in range(1, 10):
-                      if num == 5;
-                         break
-                      print(num)
+while i <= 5:
+    print("Pankaj Upadhyay")
+    i = i + 1
+```
 
-        Output: 
-              1.
-              2.
-              3.
-              4.
-        
-        (loop stops when num == 5)
-        Output:
-              1.
-              2.
-              3.
-              4.
-              5.
-    pass Statement:
-    --------------:
-          The pass Statement does nothing -- It's used as a placeholder when you want to keep a block empty:
-        Example:
-           for i in range(5):
-           pass # future code will go here.
+### Output
 
-    Practice Questions: 
-               WAP that prints numbers 1 to 10, but skips the number 7 using the continue Statement.
+```text
+Pankaj Upadhyay
+Pankaj Upadhyay
+Pankaj Upadhyay
+Pankaj Upadhyay
+Pankaj Upadhyay
+```
 
-5. Nested Loops:
----------------:
-    A loop inside another loop is called a nested loop.
-    Example:
-        for i in range(1,4 ):
-           for  j in range(1,4): 
-               print(i,j)
+### Important
 
-    Output:
-        1 1 
-        1 2 
-        1 3 
-        2 1 
-        2 2 
-        2 3 
-        3 1 
-        3 2
-        3 3
-    
-Practice: 
-  WAP Using nested loops to print this pattern:
-   * 
-   * *
-   * * *
+The statement:
 
- 
-  MINI PROJECT-Count-down Timer(with 1-second gap)
-  Goal: Print a countdown before something "exciting" happens (like "Launching..." or "Happy New Year")
-  Concept Use: for loop, range(), and the time module.
+```python
+i = i + 1
+```
 
-  MINI PROJECT-- multiplication Table 
-  Goal: Print the multiplication table of a number using a loop.
-  Sample Run:
-  ----------:
-        Enter a number : 5 
-        5 * 1 = 5
-        5 * 2 = 10 
-        .
-        .
-        .
-        5 * 10 = 50
+updates the value of `i` after every iteration.
 
- MINI PROJECT -- Guess the Number Game:
- Concept used: while loop and user input:
+We can also write:
 
- Sample Run:
-    Guess a number between 1 to 10: 4
-    Wrong guess! Try again.
-    Guess again: 7
-    Congractulation Dev! You guessed it Right.....  
-                
+```python
+i += 1
+```
 
- 
+If we forget to update `i`, the loop may become an **infinite loop**.
 
-  
-             
+---
+
+# Practice Questions — While Loop
+
+### 1.
+
+Write a program to print numbers from `1` to `10` using a `while` loop.
+
+### 2.
+
+Write a program to print numbers from `10` down to `1` using a `while` loop.
+
+### 3.
+
+Write a program to print all even numbers between `1` and `100` using a `while` loop.
+
+### 4.
+
+Write a program to print the sum of the first `n` natural numbers.
+
+Example:
+
+```text
+If n = 5
+
+1 + 2 + 3 + 4 + 5 = 15
+```
+
+**Hint:** Keep a running total inside the loop.
+
+### 5.
+
+Write a program to print the following pattern using a `while` loop:
+
+```text
+*
+* *
+* * *
+* * * *
+```
+
+### 6.
+
+Saumya wants to print her name five times, with a number in front of it.
+
+Write a program using a `while` loop that prints:
+
+```text
+1. Saumya Singh
+2. Saumya Singh
+3. Saumya Singh
+4. Saumya Singh
+5. Saumya Singh
+```
+
+### 7.
+
+Write a program to print the multiplication table of any number using a `while` loop.
+
+---
+
+# 3. For Loop
+
+A **for loop** is used to iterate over an iterable such as a list, tuple, string, or range.
+
+### Syntax
+
+```python
+for element in sequence:
+    # code block
+```
+
+### Example
+
+```python
+foods = ["Pizza", "Burger", "Samosa", "Pakoda"]
+
+for item in foods:
+    print("Pankaj likes:", item)
+```
+
+### Output
+
+```text
+Pankaj likes: Pizza
+Pankaj likes: Burger
+Pankaj likes: Samosa
+Pankaj likes: Pakoda
+```
+
+---
+
+# For Loop with `range()`
+
+The `range()` function generates a sequence of numbers and is commonly used with loops.
+
+### Syntax
+
+```python
+range(start, stop, step)
+```
+
+### Parameters
+
+* **start** → Starting number. Default is `0`.
+* **stop** → Ending limit. This value is **excluded**.
+* **step** → Difference between numbers. Default is `1`.
+
+### Example
+
+```python
+for i in range(1, 6):
+    print("Iteration:", i)
+```
+
+### Output
+
+```text
+Iteration: 1
+Iteration: 2
+Iteration: 3
+Iteration: 4
+Iteration: 5
+```
+
+Notice that `6` is not included because the `stop` value is excluded.
+
+---
+
+# Practice Questions — For Loop
+
+### 8.
+
+Write a program using `for` and `range()` to print all even numbers between `1` and `100`.
+
+### 9.
+
+Write a program to print numbers from `1` to `50`, but print `"Dev_Verse"` instead of numbers that are multiples of `5`.
+
+Example:
+
+```text
+1, 2, 3, 4, Dev_Verse, 6, 7, 8, 9, Dev_Verse, ...
+```
+
+### 10.
+
+Write a program to print the square of each number from `1` to `10` using a `for` loop.
+
+Example:
+
+```text
+1, 4, 9, 16, 25, 36, 49, 64, 81, 100
+```
+
+### 11.
+
+Write a program that prints the multiplication table of any number entered by the user using a `for` loop.
+
+Example:
+
+```text
+Enter a number: 6
+
+6 * 1 = 6
+6 * 2 = 12
+6 * 3 = 18
+.
+.
+.
+6 * 10 = 60
+```
+
+### 12.
+
+Write a program to print all numbers from `100` to `1` using `range()`.
+
+**Hint:**
+
+```python
+range(100, 0, -1)
+```
+
+### 13.
+
+Pankaj wants to print the username five times in uppercase letters.
+
+Write a program to print:
+
+```text
+DEV_VERSE_2
+DEV_VERSE_2
+DEV_VERSE_2
+DEV_VERSE_2
+DEV_VERSE_2
+```
+
+### 14.
+
+You are given a list of Pankaj's favorite foods. Write a Python program to print each food item using a `for` loop.
+
+### 15.
+
+Saumya has created a tuple of countries she has already traveled to. Write a Python program to print each country using a `for` loop.
+
+```python
+countries_traveled = (
+    "Malaysia",
+    "Vietnam",
+    "Switzerland",
+    "Italy",
+    "Bhutan"
+)
+```
+
+---
+
+# 4. `break`, `continue`, and `pass`
+
+## A. `break` Statement
+
+The `break` statement **stops the loop immediately** when it is encountered.
+
+### Example
+
+```python
+for num in range(1, 10):
+    if num == 5:
+        break
+    print(num)
+```
+
+### Output
+
+```text
+1
+2
+3
+4
+```
+
+The loop stops when `num == 5`.
+
+> `5` is not printed because `break` executes before `print(num)`.
+
+---
+
+# B. `continue` Statement
+
+The `continue` statement **skips the current iteration** and moves to the next iteration of the loop.
+
+### Example
+
+```python
+for num in range(1, 6):
+    if num == 3:
+        continue
+    print(num)
+```
+
+### Output
+
+```text
+1
+2
+4
+5
+```
+
+Here, `3` is skipped.
+
+### Practice Question
+
+Write a program that prints numbers from `1` to `10`, but skips the number `7` using the `continue` statement.
+
+---
+
+# C. `pass` Statement
+
+The `pass` statement does nothing.
+
+It is used as a **placeholder** when a block of code is intentionally left empty.
+
+### Example
+
+```python
+for i in range(5):
+    pass
+```
+
+The loop runs, but `pass` does not perform any operation.
+
+---
+
+# 5. Nested Loops
+
+A **loop inside another loop** is called a nested loop.
+
+### Example
+
+```python
+for i in range(1, 4):
+    for j in range(1, 4):
+        print(i, j)
+```
+
+### Output
+
+```text
+1 1
+1 2
+1 3
+2 1
+2 2
+2 3
+3 1
+3 2
+3 3
+```
+
+Here:
+
+* The outer loop controls `i`.
+* The inner loop controls `j`.
+* For every value of `i`, the inner loop runs completely.
+
+---
+
+# Nested Loop Practice
+
+Write a program using nested loops to print the following pattern:
+
+```text
+*
+* *
+* * *
+```
+
+### Example Solution
+
+```python
+for i in range(1, 4):
+    for j in range(i):
+        print("*", end=" ")
+    print()
+```
+
+### Output
+
+```text
+*
+* *
+* * *
+```
+
+---
+
+# 6. Mini Project — Countdown Timer
+
+### Goal
+
+Print a countdown before something exciting happens, such as:
+
+* Launching
+* Happy New Year
+* Starting an event
+
+### Concepts Used
+
+* `for` loop
+* `range()`
+* `time` module
+
+### Example
+
+```python
+import time
+
+for i in range(5, 0, -1):
+    print(i)
+    time.sleep(1)
+
+print("Launching...")
+```
+
+### Output
+
+```text
+5
+4
+3
+2
+1
+Launching...
+```
+
+There is a **1-second gap** between each number.
+
+---
+
+# 7. Mini Project — Multiplication Table
+
+### Goal
+
+Print the multiplication table of a number entered by the user.
+
+### Concepts Used
+
+* `input()`
+* Type conversion
+* `for` loop
+* `range()`
+
+### Code
+
+```python
+num = int(input("Enter a number: "))
+
+for i in range(1, 11):
+    print(num, "*", i, "=", num * i)
+```
+
+### Sample Run
+
+```text
+Enter a number: 5
+
+5 * 1 = 5
+5 * 2 = 10
+5 * 3 = 15
+5 * 4 = 20
+5 * 5 = 25
+5 * 6 = 30
+5 * 7 = 35
+5 * 8 = 40
+5 * 9 = 45
+5 * 10 = 50
+```
+
+---
+
+# 8. Mini Project — Guess the Number Game
+
+### Goal
+
+Create a simple game where the user tries to guess a randomly generated number between `1` and `10`.
+
+### Concepts Used
+
+* `while` loop
+* `input()`
+* Type conversion
+* `if-else`
+* `break`
+* `random` module
+
+### Code
+
+```python
+import random
+
+number = random.randint(1, 10)
+
+while True:
+    guess = int(input("Guess a number between 1 and 10: "))
+
+    if guess == number:
+        print("Congratulations Dev! You guessed it right.")
+        break
+    else:
+        print("Wrong guess! Try again.")
+```
+
+### Sample Run
+
+```text
+Guess a number between 1 and 10: 4
+Wrong guess! Try again.
+
+Guess a number between 1 and 10: 7
+Congratulations Dev! You guessed it right.
+```
+
+The actual correct number will be different each time because it is generated randomly.
+
+---
+
+# Day 7 — Quick Revision
+
+Today I learned:
+
+* What are loops?
+* `while` loop
+* `for` loop
+* `range()`
+* `break`
+* `continue`
+* `pass`
+* Nested loops
+* Pattern printing
+* Countdown Timer
+* Multiplication Table
+* Guess the Number Game
+
+### Key Difference
+
+| Loop / Statement | Main Purpose                        |
+| ---------------- | ----------------------------------- |
+| `while`          | Repeats while a condition is `True` |
+| `for`            | Iterates over an iterable           |
+| `break`          | Stops the loop completely           |
+| `continue`       | Skips the current iteration         |
+| `pass`           | Does nothing; acts as a placeholder |
+| Nested loop      | A loop inside another loop          |
+
+**Practice → Understand → Code → Repeat. 🚀**

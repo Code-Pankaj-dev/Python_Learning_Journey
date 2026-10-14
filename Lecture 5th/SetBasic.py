@@ -1,21 +1,41 @@
-teacher = { "Arvind Kushwaha", "Vinod Guru G", " Manoj Sir", "Rahman Sir", "Madhu Ma'am", "Vivekanand Sir"}
-print(type(teacher))  
+# Set Basic
+teacher = {
+    "Arvind Kushwaha",
+    "Vinod Guru G",
+    "Manoj Sir",
+    "Rahman Sir",
+    "Madhu Ma'am",
+    "Vivekanand Sir"
+}
+print(type(teacher))
 print(teacher)
-teacher = { "Arvind Kushwaha", "Vinod Guru G", "Manoj Sir", "Rahman Sir", "Madhu Ma'am", "Vivekanand Sir", "Manoj Sir"}
-#output: <class 'set'>
+
+# Duplicate elements are automatically removed
+teacher = {
+    "Arvind Kushwaha",
+    "Vinod Guru G",
+    "Manoj Sir",
+    "Rahman Sir",
+    "Madhu Ma'am",
+    "Vivekanand Sir",
+    "Manoj Sir"
+}
 print(teacher)
-# #Output: {'Arvind Kushwaha', 'Vivekanand Sir', ' Manoj Sir', 'Rahman Sir', 'Vinod Guru G', "Madhu Ma'am"}
+
+# Add a new element
 teacher.add("Nilesh Sir")
 print(teacher)
+
+# Remove an element
 teacher.remove("Manoj Sir")
-print(teacher)   
+print(teacher)
+
+# Remove all elements
 teacher.clear()
 print(teacher)
-# print(tuple())
-# #Output: ()
 
+# Create an empty set
 
-# # Create empty set:
-
-# emptySet = set()
-# print(type(emptySet))
+emptySet = set()
+print(type(emptySet))
+print(emptySet)

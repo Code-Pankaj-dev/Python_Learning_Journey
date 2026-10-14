@@ -1,185 +1,528 @@
-1. Dictionary in Python:
------------------------:
-     Definition:  A dictionary is a built in data type in Python used to store data in kry-value pairs.
-           Each key is unique and maps to a value.
-        Dictionaries are unordered, mutable (changeable), and don't allow duplicate keys.
-    Examples:
-       student = { 
-        "name" : "Pankaj Upadhyay",
-        "age" : 21,
-        "city" : "Siddharth Nagar",
-        "college" : "MMIT Bansi Siddharth Nagar",
-        "rollnumber" : 31
-       }
+# Python Learning — Day 5
 
-    HERE: 
-      * "name", "age", "city", "college", "rollnumber" --> keys
-      * "Pankaj Upadhyay", 21, "Siddharth Nagar", "MMIT Bansi Siddharth Nagar", 31 --> value
+## Topics: Dictionary and Set
 
-    Accessing Values:
-    -----------------
-                 You can access a value using its key:
-                 print(student["name"])      # Pankaj Upadhyay
-                 print(student["city"])      # Siddharth Nagar
-                 print(student["college"])    # MMIT Bansi Siddharth Nagar
-                
-            
-    Adding or Updating Values
-    -------------------------
-                  You can add new key-value pairs or modify existing ones:
-                     student["rollnumber"] = 21   # Add new key
-                     student["college"] = "BTEUP Lucknow"      # Update college name
-                     print(student)
-    
-    Removing Items:
-    ---------------
-             student.pop("city)         # Remove "city" key
-             print(student)
-        
-    Dictionary Methods:
-    ---------------------
-                 |-------------------|---------------------------------------|----------------------------|
-                 |      Method       |     Discription                       |       Examples             |
-                 |-------------------|---------------------------------------|----------------------------|
-                 |     .keys()       |   Returns all keys                    |   student.keys()           |
-                 |-------------------|---------------------------------------|----------------------------|
-                 |     .values()     |  Returns all values                   |    student.values()        |
-                 |-------------------|---------------------------------------|----------------------------|
-                 |    .items()       | Returns all key-value pairs as tuples |    student.items()         |
-                 |-------------------|---------------------------------------|----------------------------|
-                 |   .get(key)       | Returns value of a key safely         |  student.get("name")       |
-                 |-------------------|---------------------------------------|----------------------------|
-                 | .update(new_dict) | Updates dictionary with another       | student.update({"city" =   |
-                 |                   |                                       |  "Lucknow"})               |
-                 |-------------------|---------------------------------------|----------------------------|
+---
 
+# 1. Dictionary in Python
 
-    Nested Dictionary:
-    ------------------
-         You can store another dictionary inside a dictionary.
-        Examples:
-            profile = {
-                "username" : "dev_verse",
-                "details" : {
-                    "followers" : 1300,
-                    "verified" : True
-                }
-            }
-        
-        Access: print(profile["details"]["followers"])  #  1300
-        ------:
+A **Dictionary** is a built-in Python data type used to store data in **key-value pairs**.
 
-        Practice Question 1:
-        --------------------: Create a dictionary named marks to store marks of subjects. Add the subject one by one and print the finai dictionary.
-            
-            Examples:
-              Input:
-              Maths --> 90
-              Science --> 95
-              English --> 97
+### Key Features
 
-            Output: {'Maths' : 90, 'Science' : 95, "English" : 97}
+* A dictionary stores data in **key-value pairs**.
+* Each key must be **unique**.
+* Values can be duplicated.
+* Dictionaries are **mutable**, which means their contents can be changed.
+* Dictionaries **preserve insertion order** in modern Python (Python 3.7+).
+* Dictionary keys must be **hashable**, such as strings, numbers, or tuples containing hashable values.
 
+### Example
 
-2. Set in Python:
-----------------:
-   Definition: A set is a collection of unordered and unique items. Sets automatically remove duplicate elements and are written using curly braces{ }.
+```python
+student = {
+    "name": "Pankaj Upadhyay",
+    "age": 21,
+    "city": "Siddharth Nagar",
+    "college": "MMIT Bansi Siddharth Nagar",
+    "rollnumber": 31
+}
+```
 
-   Examples:
-      languages = {"Python", "Java", "C++", "Python"}
-      print(languages)
-      # Output: 'Python', 'Java', 'C++'
-    
-  Create a Set:
-  ------------:
-     empty_set = set()  #Empty set
-     nums = {1, 2, 3, 4}  # Non-empty_set
+### Keys
 
-  Set Properties
-  --------------
-       * Unordered --> no fixed index positions
-       * Unique --> no duplicates.
-       * Mutable --> elements can be added or removed.
-       * Cannot contain mutable elements like lists or dictionaries.
+```text
+"name"
+"age"
+"city"
+"college"
+"rollnumber"
+```
 
- Adding and Removing Elements:
- ----------------------------:
-     nums ={1, 2, 3, 4, 5}
-     nums.add(6)
-     nums.remove(3)
-     print(nums)
-     #Output:
-            {1, 2, 4, 5, 6}
+### Values
 
-        
-        Other Useful Methods
-        --------------------
-        
-                 |-------------------|---------------------------------------|----------------------------|
-                 |      Method       |     Discription                       |       Examples             |
-                 |-------------------|---------------------------------------|----------------------------|
-                 |     .add(el)      |   Add an Element                      |   nums.add(8)              |
-                 |-------------------|---------------------------------------|----------------------------|
-                 |   .remove(el)     |  Remove Element                       |    nums.remove(5)          |
-                 |-------------------|---------------------------------------|----------------------------|
-                 |    .clear()       | Empties the set                       |    nums.clear()            |
-                 |-------------------|---------------------------------------|----------------------------|
-                 |   .pop()          | Remove a rendom Element               |  nums.pop()                |
-                 |-------------------|---------------------------------------|----------------------------|
-                 | .union(set2)      | Combines both sets                    |   {1,2}.union({2,3 --})    |
-                 |-------------------|---------------------------------------|----------------------------|
-                 |.intersection(set2)|  Common Element of both sets          |  {1,2,3}.intersection      |
-                 |-------------------|---------------------------------------|----------------------------|
+```text
+"Pankaj Upadhyay"
+21
+"Siddharth Nagar"
+"MMIT Bansi Siddharth Nagar"
+31
+```
 
-        
-        Practice Question 2:
-        -------------------:
-# You are given a list of programming languages:
-# ["Python", "Java", "C++", "Python", "Java", "C"]
-# Convert it into a set and print how many unique languages Divya knows.
+---
 
-programmingList = ["Python", "Java", "C++", "Python", "Java", "C"]
+## Accessing Dictionary Values
+
+We can access a value using its key.
+
+```python
+print(student["name"])
+print(student["city"])
+print(student["college"])
+```
+
+### Output
+
+```text
+Pankaj Upadhyay
+Siddharth Nagar
+MMIT Bansi Siddharth Nagar
+```
+
+> If the specified key does not exist, `student["key"]` raises a `KeyError`.
+
+---
+
+# Adding and Updating Items
+
+If a key does not exist, assigning a value creates a new key.
+
+```python
+student["email"] = "pankaj@example.com"
+```
+
+If the key already exists, its value is updated.
+
+```python
+student["rollnumber"] = 21
+student["college"] = "BTEUP Lucknow"
+
+print(student)
+```
+
+---
+
+# Removing an Item
+
+The `pop()` method removes the specified key and returns its value.
+
+```python
+student.pop("city")
+print(student)
+```
+
+---
+
+# Important Dictionary Methods
+
+| Method         | Description                                   |
+| -------------- | --------------------------------------------- |
+| `keys()`       | Returns all keys                              |
+| `values()`     | Returns all values                            |
+| `items()`      | Returns all key-value pairs                   |
+| `get(key)`     | Returns the value for a key safely            |
+| `update(dict)` | Adds or updates items from another dictionary |
+| `pop(key)`     | Removes the specified key                     |
+| `clear()`      | Removes all items                             |
+
+### Examples
+
+```python
+print(student.keys())
+print(student.values())
+print(student.items())
+print(student.get("name"))
+```
+
+### `update()` Example
+
+```python
+student.update({"city": "Lucknow"})
+print(student)
+```
+
+> **Important:** Dictionary uses `:` between key and value, not `=`.
+
+Correct:
+
+```python
+{"city": "Lucknow"}
+```
+
+Incorrect:
+
+```python
+{"city" = "Lucknow"}
+```
+
+---
+
+# Nested Dictionary
+
+A dictionary can contain another dictionary as a value.
+
+```python
+profile = {
+    "username": "dev_verse",
+    "details": {
+        "followers": 1300,
+        "verified": True
+    }
+}
+
+print(profile["details"]["followers"])
+```
+
+### Output
+
+```text
+1300
+```
+
+---
+
+# Practice Question 1
+
+Create a dictionary named `marks` to store the marks of different subjects.
+
+### Example
+
+```python
+marks = {}
+
+marks["Maths"] = 90
+marks["Science"] = 95
+marks["English"] = 97
+
+print(marks)
+```
+
+### Output
+
+```text
+{'Maths': 90, 'Science': 95, 'English': 97}
+```
+
+---
+
+# 2. Set in Python
+
+A **Set** is an unordered collection of **unique elements**.
+
+A set automatically removes duplicate elements.
+
+### Example
+
+```python
+languages = {"Python", "Java", "C++", "Python"}
+
+print(languages)
+```
+
+The duplicate `"Python"` is automatically removed.
+
+### Possible Output
+
+```text
+{'Python', 'Java', 'C++'}
+```
+
+> The order of elements in a set is **not guaranteed**, so the output order may be different.
+
+---
+
+# Creating a Set
+
+```python
+empty_set = set()
+
+nums = {1, 2, 3, 4}
+```
+
+### Important
+
+Do not use `{}` to create an empty set.
+
+```python
+empty = {}
+```
+
+This creates an **empty dictionary**, not a set.
+
+Correct:
+
+```python
+empty_set = set()
+```
+
+---
+
+# Properties of a Set
+
+### 1. Unique
+
+A set does not store duplicate elements.
+
+```python
+nums = {1, 2, 2, 3}
+print(nums)
+```
+
+Output:
+
+```text
+{1, 2, 3}
+```
+
+### 2. Unordered
+
+A set does not provide a fixed positional order.
+
+### 3. Mutable
+
+We can add or remove elements from a set.
+
+### 4. No Indexing
+
+We cannot access set elements using indexes like:
+
+```python
+nums[0]
+```
+
+This results in an error.
+
+### 5. Set Elements Must Be Hashable
+
+A set cannot directly contain mutable objects such as lists or dictionaries.
+
+---
+
+# Adding and Removing Elements
+
+```python
+nums = {1, 2, 3, 4, 5}
+
+nums.add(6)
+nums.remove(3)
+
+print(nums)
+```
+
+The set will contain:
+
+```text
+{1, 2, 4, 5, 6}
+```
+
+> The order may vary because sets are unordered.
+
+---
+
+# Important Set Methods
+
+| Method               | Description                                           |
+| -------------------- | ----------------------------------------------------- |
+| `add(element)`       | Adds an element                                       |
+| `remove(element)`    | Removes an element; raises `KeyError` if not found    |
+| `discard(element)`   | Removes an element without raising an error if absent |
+| `clear()`            | Removes all elements                                  |
+| `pop()`              | Removes and returns an arbitrary element              |
+| `union(set2)`        | Combines elements from both sets                      |
+| `intersection(set2)` | Returns common elements                               |
+
+---
+
+# Union Example
+
+```python
+set1 = {1, 2, 3}
+set2 = {3, 4, 5}
+
+result = set1.union(set2)
+
+print(result)
+```
+
+Output:
+
+```text
+{1, 2, 3, 4, 5}
+```
+
+---
+
+# Intersection Example
+
+```python
+set1 = {1, 2, 3}
+set2 = {3, 4, 5}
+
+result = set1.intersection(set2)
+
+print(result)
+```
+
+Output:
+
+```text
+{3}
+```
+
+---
+
+# Practice Question 2
+
+Convert a list containing duplicate programming languages into a set.
+
+```python
+programmingList = [
+    "Python",
+    "Java",
+    "C++",
+    "Python",
+    "Java",
+    "C"
+]
+
 print(type(programmingList))
 
-# how to convert a list into set
 programmingSet = set(programmingList)
+
 print(type(programmingSet))
 print(programmingSet)
-print("Divya knows these many language: ", len(programmingSet))
 
+print("Divya knows these many languages:", len(programmingSet))
+```
 
-3. Difference Between dictionary and Set
-----------------------------------------
+### Output
 
+The set contains four unique languages:
 
-                 |-------------------|---------------------------------|----------------------------|
-                 |   Freatures       |       Dictionary                |     Set                    |
-                 |-------------------|---------------------------------|----------------------------|
-                 |   Structures      | Stores data as key-value pairs  | Stores unique values only  |
-                 |-------------------|---------------------------------|----------------------------|
-                 |   Syntex          |    { "key" : value }            | {value1, value2, .......}  |
-                 |-------------------|---------------------------------|----------------------------|
-                 |    Mutable        |      Yes                        |        Yes                 |
-                 |-------------------|---------------------------------|----------------------------|
-                 |   Duplicates      |  Keys are unique                |  All elements unique       |
-                 |-------------------|---------------------------------|----------------------------|
-                 |   Indexing        |  Not supported                  |     Not supported          |
-                 |-------------------|---------------------------------|----------------------------|
+```text
+Python
+Java
+C++
+C
+```
 
+Therefore:
 
-    Mini Assignment:
-      1. Create a dictionary atoring meanings of 3 English words.
-      2. Create a set of numbers and show union and intersection with another set.
-      3. Try to add both integer 9 and float 9.0 to a set and observe what happens.
-           (Hint:  You can convert one into a string to make both unique.)
+```text
+4
+```
 
+> The order of the set elements may be different.
 
+---
 
+# 3. Difference Between Dictionary and Set
 
-              
+| Feature                 | Dictionary                | Set                     |
+| ----------------------- | ------------------------- | ----------------------- |
+| Structure               | Key-value pairs           | Unique values           |
+| Syntax                  | `{"key": value}`          | `{value1, value2}`      |
+| Mutable                 | Yes                       | Yes                     |
+| Duplicate Keys/Elements | Keys must be unique       | Elements must be unique |
+| Indexing                | No                        | No                      |
+| Ordering                | Preserves insertion order | No guaranteed order     |
+| Main Use                | Store data with keys      | Store unique elements   |
 
-                   
+### Example
 
+**Dictionary:**
 
-       
-  
+```python
+student = {
+    "name": "Pankaj",
+    "age": 21
+}
+```
+
+**Set:**
+
+```python
+numbers = {1, 2, 3, 4}
+```
+
+---
+
+# 4. Mini Assignment
+
+### Question 1
+
+Create a dictionary that stores the meanings of three English words.
+
+Example:
+
+```python
+words = {
+    "Happy": "Feeling good",
+    "Brave": "Having courage",
+    "Quick": "Moving fast"
+}
+
+print(words)
+```
+
+---
+
+### Question 2
+
+Create two sets and demonstrate their **union** and **intersection**.
+
+```python
+set1 = {1, 2, 3, 4}
+set2 = {3, 4, 5, 6}
+
+print(set1.union(set2))
+print(set1.intersection(set2))
+```
+
+---
+
+### Question 3
+
+Add both `9` and `9.0` to a set and observe the result.
+
+```python
+numbers = {9, 9.0}
+
+print(numbers)
+print(len(numbers))
+```
+
+### Expected Result
+
+```text
+{9}
+1
+```
+
+This happens because:
+
+```python
+9 == 9.0
+```
+
+is `True`, and they are treated as the same set element.
+
+If you want them to be separate, use different types such as:
+
+```python
+numbers = {9, "9.0"}
+```
+
+Now they are different elements.
+
+---
+
+# Day 5 Summary
+
+Today I learned:
+
+* Dictionary
+* Key-value pairs
+* Dictionary keys and values
+* Adding and updating dictionary items
+* Removing dictionary items
+* Important dictionary methods
+* Nested dictionaries
+* Set
+* Unique elements
+* Creating and modifying sets
+* Set methods
+* Union
+* Intersection
+* Difference between Dictionary and Set
+* Practical assignments

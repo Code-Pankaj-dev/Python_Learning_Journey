@@ -1,33 +1,43 @@
 # Dictionary Basic
 
-College={
-   "name" : "MMIT Kushnagar", 
-   "city" : "Kushinagar",
-   "age"  : 19,
-   "rollnumber" : 31,
-   "name" : "Dev_Verse"
+College = {
+    "name": "Dev_Verse",
+    "city": "Kushinagar",
+    "age": 19,
+    "rollnumber": 31
 }
 
-# College["aadhar"] = "878754329345"   # Add another Key and Keys value
+# Print all keys
+print(College.keys())
+
+# Print all key-value pairs
+print(College.items())
+
+# Remove and return the last inserted item
+print(College.popitem())
+
+# Add a key with a default value if it does not exist
+# print(College.setdefault("country", "India"))
+
+
+
+# Add a new key and value
+# College["aadhar"] = "XXXXXXXXXXXX"
 # print(College)
+
+# Update an existing value
 # College["city"] = "SiddharthNagar"
 # print(College)
 
+# Remove a key
 # College.pop("aadhar")
 # print(College)
 
-# print(type(College))  # print college dictonary data type
-# print(College["name"]) # print college name 
-# print(College)  #  print all key of college
-# print(College["age"])   # prnt age
-# print(College["city"]) #print city
+# Print dictionary data type
+# print(type(College))
 
-# print(College["rollnumber"])  # print rollnumber
-
-
-print(College.keys())   #print only Keys/ print All Keys
-##Output: dict_keys(['name', 'city', 'age', 'rollnumber'])
-print(College.items())     
-#Output:  dict_items([('name', 'Dev_Verse'), ('city', 'Kushinagar'), ('age', 19), ('rollnumber', 31)])
-print(College.popitem())
-# print(College.setdefault()) 
+# Access a value using its key
+# print(College["name"])
+# print(College["age"])
+# print(College["city"])
+# print(College["rollnumber"])

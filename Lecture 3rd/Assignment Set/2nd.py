@@ -8,5 +8,6 @@ Sen = "I am able to ride bicycle/scooter/motor cycle for performing my duty as a
 "I declare that I have not done any duplicate registration with another email/mobile number and I understood that my candidature will be disqualified if found as duplicate registration." \
 "I hereby undertake to declare that I am a computer literate and I will be able to use smart phone/laptop/handheld device supplied by the Department from the first day of engagement."
 
-print("    ",len(Sen))   #        * The Total number of characters
-print(Sen[:10])
+print("First Character:", Sen[0])
+print("Last Character:", Sen[-1])
+print("Total Characters:", len(Sen))
